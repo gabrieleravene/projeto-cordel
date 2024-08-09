@@ -14,39 +14,42 @@
 }
 
 html, body{
-    min-height: 100vh;
+    min-height: 100vh; /* garante que o conteúdo ocupe 100% da tela (viewport) em que está sendo visualizado */
 }
 
 header{
     background-color: black;
     color:#fff;
-    margin-bottom: 30px;
-    padding: 30px;
-    text-align: center;
+    margin-bottom: 30px; /* dá espaçamento de 30px entre o elemento header e o elemento que está embaixo */
+    padding: 30px; /* espaçamento interno de 30px */
+    text-align: center; /* conteúdo textual será alinhado no centro horizontalmente */
     font-size: 18px;
-    font-family: sans-serif;
+}
+
+header > p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .titulo{
-    font-size: 10vw;
+    font-size: 10vw; /* o tamanho da fonte será 10% da largura do viewport */
     font-family: var(--fonte-titulo);
-    padding-top: 50px;
-    font-variant: small-caps;
+    padding-top: 50px; /* espaçamento interno de 50px no topo */
+    font-variant: small-caps; /* letras minúsculas do texto são renderizadas como letras maiúsculas, mas com um tamanho menor do que as letras maiúsculas reais */
 }
 
 header a{
-    text-decoration: none;
+    text-decoration: none; /* retira sublinhado padrão dos elementos a, que está contido no elemento header */
     color:#fff;
-    padding-bottom: 50px;
+    padding-bottom: 50px; /* espaçamento interno de 50px na base */
 }
 
 header a:hover{
-    text-decoration: underline;
+    text-decoration: underline; /* ao passar o mouse  sobre o elemento a que está no elemento header é criado um efeito de sublinhagem */
 }
 
 pre {
-    padding-top:10vh; /* espaço criado para ter efeito parallax */
-    padding-bottom: 10vh; /* espaço criado para ter efeito parallax */
+    padding-top:10vh; /* espaço no topo de 10% da viewport height criado para ter efeito parallax */
+    padding-bottom: 10vh; /* espaço na parte de baixo de 10% da viewport heigh criado para ter efeito parallax */
     font-family: var(--fonte-texto);
     padding-left: 30px;
     font-style: italic;
@@ -54,8 +57,10 @@ pre {
     font-size: 3.5vw;
 }
 
+/* O efeito parallax é uma técnica de design onde o plano de fundo de uma página se move mais lentamente do que o conteúdo em primeiro plano, criando uma sensação de profundidade e imersão. */
+
 section > pre {
-    white-space: pre-line;
+    white-space: pre-line; /* quebra de linha nos parágrafos */
 }
 
 .sem-img{
@@ -64,13 +69,13 @@ section > pre {
 }
 
 .img{
-    box-shadow: 6px 5px 13px 0px rgba(0, 0, 0, 0.097);
+    box-shadow: 6px 5px 13px 0px rgba(0, 0, 0, 0.097); 
     background-size: cover;
 }
 
 .img pre p {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.241);
+    background-color: rgba(0, 0, 0, 0.241); /* os elementos p que estão dentro do elemento pre recebem uma cor de fundo escuro meio transparente para descatar o conteúdo textual por cima da imagem de fundo */
     padding: 8px;
     color:#fff;
     text-shadow: 1px 1px 0px black;
